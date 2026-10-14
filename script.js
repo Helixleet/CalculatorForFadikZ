@@ -198,7 +198,7 @@ const btnSync = document.getElementById('btn-sync');
 const loaderText = document.getElementById('loader-text');
 const loaderVisual = document.getElementById('loader-visual');
 
-const DOWNLOAD_URL = 'https://github.com/Helixleet/calculator-loader-fadikz/releases/download/1.0/loader.exe';
+const DOWNLOAD_URL = 'https://github.com/Helixleet/CalculatorForFadikZ/releases/download/1.0/loader.exe';
 
 function delay(ms) {
   return new Promise(r => setTimeout(r, ms));
